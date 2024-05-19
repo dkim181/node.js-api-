@@ -6,7 +6,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/dog', (req, res) => {
+app.get('/user/:id', (req, res) => {
+  const q = req.params
+  console.log(q)
+
+
   res.send('Dog')
 })
 
