@@ -6,16 +6,16 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/user/:id', (req, res) => {
-  const q = req.params
-  console.log(q)
 
+app.get('/sound/:name', (req, res) => {
+  const{ name } = req.params
 
-  res.send('Dog')
-})
+  if(name == "dog") {
+    res.json({'sound': '멍멍' })
+  } else if (name == "cat") {
+    res.json({'sound': '야옹' })
+  }
 
-app.get('/cat', (req, res) => {
-  res.send('Cat')
 })
 
 
